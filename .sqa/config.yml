@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights git:
         commands:
-        - /usr/bin/env sh .sqa/script.verdant_perky_lobster.sh
-        container: qc.acc_ebony_sociable_chimpanzee
+        - /usr/bin/env sh .sqa/script.eggplant_adaptable_komodo.sh
+        container: qc.acc_alabaster_energetic_unicorn
   QC.Doc:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.grape_apathetic_caribou.sh
-        container: qc.doc_pink_scrappy_chimpanzee
+        - /usr/bin/env sh .sqa/script.thunder_determined_lionfish.sh
+        container: qc.doc_cream_upbeat_roadrunner
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights git:
         commands:
-        - /usr/bin/env sh .sqa/script.incarnadine_dizzy_viper.sh
-        container: qc.doc_khaki_candid_kiwi
+        - /usr/bin/env sh .sqa/script.umber_logical_antelope.sh
+        container: qc.doc_gold_humorous_macaw
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.bluebell_ardent_viper.sh
-        container: qc.doc_chartreuse_humorous_mandrill
+        - /usr/bin/env sh .sqa/script.champagne_meticulous_gecko.sh
+        container: qc.doc_pistachio_foolish_antelope
   QC.Lic:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.pineapple_elated_capybara.sh
-        container: qc.lic_steel_dedicated_pegasus
+        - /usr/bin/env sh .sqa/script.ceru_daring_kingfisher.sh
+        container: qc.lic_pansy_methodical_boa
   QC.Met:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.lagoon_respectful_buffalo.sh
-        container: qc.met_pearl_ambitious_toad
+        - /usr/bin/env sh .sqa/script.persimmon_fierce_rabbit.sh
+        container: qc.met_pumpkin_whimsical_sloth
   QC.Sty:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.fandango_compassionate_hummingbird.sh
-        container: qc.sty_wisteria_generous_spider
+        - /usr/bin/env sh .sqa/script.slate_candid_python.sh
+        container: qc.sty_lime_feisty_lemur
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.lapis_enigmatic_dragon.sh
-        container: qc.sty_chocolate_candid_kirin
+        - /usr/bin/env sh .sqa/script.emerald_inventive_kraken.sh
+        container: qc.sty_orchid_bubbly_orangutan
   QC.Ver:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.watermelon_adaptable_elk.sh
-        container: qc.ver_azure_sarcastic_marmoset
+        - /usr/bin/env sh .sqa/script.celadon_inspired_roadrunner.sh
+        container: qc.ver_viridian_perky_pelican
 timeout: 5400
