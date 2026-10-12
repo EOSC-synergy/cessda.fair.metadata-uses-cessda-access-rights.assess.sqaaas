@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights:
+      branch: main
+      repo: https://github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights git:
+        commands:
+        - /usr/bin/env sh .sqa/script.verdant_perky_lobster.sh
+        container: qc.acc_ebony_sociable_chimpanzee
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.grape_apathetic_caribou.sh
+        container: qc.doc_pink_scrappy_chimpanzee
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights git:
+        commands:
+        - /usr/bin/env sh .sqa/script.incarnadine_dizzy_viper.sh
+        container: qc.doc_khaki_candid_kiwi
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluebell_ardent_viper.sh
+        container: qc.doc_chartreuse_humorous_mandrill
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.pineapple_elated_capybara.sh
+        container: qc.lic_steel_dedicated_pegasus
+  QC.Met:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.lagoon_respectful_buffalo.sh
+        container: qc.met_pearl_ambitious_toad
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.fandango_compassionate_hummingbird.sh
+        container: qc.sty_wisteria_generous_spider
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lapis_enigmatic_dragon.sh
+        container: qc.sty_chocolate_candid_kirin
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.watermelon_adaptable_elk.sh
+        container: qc.ver_azure_sarcastic_marmoset
+timeout: 5400
